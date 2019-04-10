@@ -21,4 +21,13 @@
 	</parent>
 	<artifactId>helloworld-model</artifactId>
 
+
+	<dependencies>
+		<dependency>
+			<groupId>org.jbpm</groupId>
+			<artifactId>jbpm-audit</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	
 </project>
