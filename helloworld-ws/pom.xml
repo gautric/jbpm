@@ -38,8 +38,6 @@
 			<version>1.0.0</version>
 		</dependency>
 
-		<!-- <dependency> <groupId>net.a.g.jbpm</groupId> <artifactId>helloworld-kjar</artifactId> 
-			<version>1.0.0</version> </dependency> -->
 		<dependency>
 			<groupId>javax.enterprise</groupId>
 			<artifactId>cdi-api</artifactId>
@@ -56,24 +54,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>org.jboss.spec.javax.annotation</groupId>
-			<artifactId>jboss-annotations-api_1.2_spec</artifactId>
-			<scope>provided</scope>
-		</dependency>
 
-		<dependency>
-			<groupId>org.jboss.spec.javax.servlet</groupId>
-			<artifactId>jboss-servlet-api_3.1_spec</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>javax.jws</groupId>
-			<artifactId>jsr181-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<!-- <dependency> <groupId>org.jboss.spec.javax.xml.ws</groupId> <artifactId>jboss-jaxws-api_2.3_spec</artifactId> 
-			</dependency> -->
 		<dependency>
 			<groupId>org.codehaus.btm</groupId>
 			<artifactId>btm</artifactId>
@@ -128,25 +109,9 @@
 			<groupId>org.jbpm</groupId>
 			<artifactId>jbpm-kie-services</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>org.jboss.spec.javax.transaction</groupId>
-			<artifactId>jboss-transaction-api_1.2_spec</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.jboss.spec.javax.jms</groupId>
-			<artifactId>jboss-jms-api_2.0_spec</artifactId>
-			<scope>provided</scope>
-		</dependency>
-
 		<dependency>
 			<groupId>org.jbpm</groupId>
 			<artifactId>jbpm-services-cdi</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.jbpm</groupId>
-			<artifactId>jbpm-kie-services</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.jbpm</groupId>
@@ -185,10 +150,7 @@
 			<groupId>org.kie</groupId>
 			<artifactId>kie-internal</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>com.thoughtworks.xstream</groupId>
-			<artifactId>xstream</artifactId>
-		</dependency>
+
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
