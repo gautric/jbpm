@@ -42,7 +42,7 @@ public interface HelloWorldService {
 	 * @return the number of current bookings
 	 */
 	@WebMethod
-	String sayHelloToName(String name);
+	String sayHelloToName(@WebParam(name = "name") String name);
 
 	/**
 	 * Say hello to someone precisely
@@ -52,7 +52,7 @@ public interface HelloWorldService {
 	 * @return the number of current bookings
 	 */
 	@WebMethod
-	String sayHelloToPerson(@WebParam Person person);
+	String sayHelloToPerson(@WebParam(name = "person") Person person);
 	
 	
 	/**
@@ -63,6 +63,6 @@ public interface HelloWorldService {
 	 * @return the number of current bookings
 	 */
 	@WebMethod
-	PersonReply replyHelloToPerson(@WebParam Person person);
+	PersonReply replyHelloToPerson(@WebParam(name = "person") Person person);
 
 }
