@@ -2,8 +2,6 @@ package net.a.g.ejb;
 
 import java.util.Enumeration;
 
-import javax.ejb.ActivationConfigProperty;
-import javax.ejb.MessageDriven;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageListener;
