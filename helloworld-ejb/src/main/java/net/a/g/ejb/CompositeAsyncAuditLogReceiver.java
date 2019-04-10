@@ -2,9 +2,12 @@ package net.a.g.ejb;
 
 import java.util.Enumeration;
 
+import javax.ejb.ActivationConfigProperty;
+import javax.ejb.MessageDriven;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageListener;
+import javax.jms.TextMessage;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +23,7 @@ public class CompositeAsyncAuditLogReceiver implements MessageListener {
 	public void onMessage(Message message) {
 
 		try {
-			logger.info("Audit log message received {}", message.getBody(String.class));
+			logger.info("Audit log message received {}", ((TextMessage) message).getText());
 
 			Enumeration<String> enum_ = message.getPropertyNames();
 

@@ -20,6 +20,7 @@ import javax.inject.Inject;
 import javax.jws.WebService;
 
 import net.a.g.data.Person;
+import net.a.g.data.PersonReply;
 import net.a.g.jbpm.JBPMService;
 
 @WebService(serviceName = "HelloWorldService", portName = "HelloWorld", name = "HelloWorld", endpointInterface = "net.a.g.ws.HelloWorldService", targetNamespace = "urn://helloworld/HelloWorld")
@@ -44,6 +45,11 @@ public class HelloWorldServiceImpl implements HelloWorldService {
 		service.sayHelloToPerson(person);
 
 		return "Hello " + person.getName();
+	}
+
+	@Override
+	public PersonReply replyHelloToPerson(Person person) {
+		return new PersonReply(sayHelloToPerson(person));
 	}
 
 }

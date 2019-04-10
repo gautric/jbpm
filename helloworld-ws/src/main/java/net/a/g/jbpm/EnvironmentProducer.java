@@ -12,23 +12,17 @@ import javax.persistence.PersistenceUnit;
 
 import org.jbpm.services.api.DeploymentService;
 import org.jbpm.services.cdi.Kjar;
-import org.jbpm.services.cdi.Selectable;
-import org.jbpm.services.cdi.producer.UserGroupInfoProducer;
 import org.jbpm.services.task.events.DefaultTaskEventListener;
+import org.jbpm.services.task.identity.JBossUserGroupCallbackImpl;
 import org.kie.api.KieBase;
 import org.kie.api.cdi.KReleaseId;
 import org.kie.api.task.TaskLifeCycleEventListener;
-import org.kie.api.task.UserInfo;
 import org.kie.internal.identity.IdentityProvider;
 
 public class EnvironmentProducer {
 
 	@PersistenceUnit(unitName = "org.jbpm.domain")
 	private EntityManagerFactory emf;
-
-	@Inject
-	@Selectable
-	private UserGroupInfoProducer userGroupInfoProducer;
 
 	@Inject
 	@Kjar
@@ -43,15 +37,10 @@ public class EnvironmentProducer {
 		return this.emf;
 	}
 
-	@Produces
-	public org.kie.api.task.UserGroupCallback produceSelectedUserGroupCalback() {
-		return userGroupInfoProducer.produceCallback();
-	}
-
-	@Produces
-	public UserInfo produceUserInfo() {
-		return userGroupInfoProducer.produceUserInfo();
-	}
+//	@Produces
+//	public org.kie.api.task.UserGroupCallback produceSelectedUserGroupCalback() {
+//		return new JBossUserGroupCallbackImpl();
+//	}
 
 	@Produces
 	@Named("Logs")
@@ -93,6 +82,7 @@ public class EnvironmentProducer {
 	@PostConstruct
 	public void postConstruct() {
 		System.setProperty("org.jbpm.var.log.length", "1024");
+		System.setProperty("org.apache.cxf.logging.enabled", "true");
 	}
 
 }

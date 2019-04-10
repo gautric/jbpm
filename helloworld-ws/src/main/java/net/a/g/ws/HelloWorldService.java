@@ -21,6 +21,7 @@ import javax.jws.WebParam;
 import javax.jws.WebService;
 
 import net.a.g.data.Person;
+import net.a.g.data.PersonReply;
 
 @WebService(targetNamespace = "urn://helloworld/HelloWorld")
 public interface HelloWorldService {
@@ -52,5 +53,16 @@ public interface HelloWorldService {
 	 */
 	@WebMethod
 	String sayHelloToPerson(@WebParam Person person);
+	
+	
+	/**
+	 * Say hello to someone precisely
+	 *
+	 * @param name
+	 *            The name of the person to say hello to
+	 * @return the number of current bookings
+	 */
+	@WebMethod
+	PersonReply replyHelloToPerson(@WebParam Person person);
 
 }
