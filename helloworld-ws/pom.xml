@@ -32,6 +32,11 @@
 			<version>1.0.0</version>
 		</dependency>
 
+		<dependency>
+			<groupId>net.a.g.jbpm</groupId>
+			<artifactId>helloworld-ejb</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
 		<!-- <dependency> <groupId>net.a.g.jbpm</groupId> <artifactId>helloworld-kjar</artifactId> 
 			<version>1.0.0</version> </dependency> -->
