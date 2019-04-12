@@ -23,6 +23,12 @@
 	<dependencies>
 
 		<dependency>
+			<groupId>org.kie</groupId>
+			<artifactId>kie-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
 			<groupId>net.a.g.jbpm</groupId>
 			<artifactId>helloworld-model</artifactId>
 			<version>1.0.0</version>
